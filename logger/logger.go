@@ -2,7 +2,6 @@ package logger
 
 import (
 	"flag"
-	"go/build"
 	"log"
 	"os"
 )
@@ -13,7 +12,8 @@ var (
 
 func init() {
 	// set location of log file
-	var logpath = build.Default.GOPATH + "/src/chat/logger/info.log"
+	dirname, _ := os.UserHomeDir()
+	var logpath = dirname + "/shelly/debug.log"
 
 	flag.Parse()
 	var file, err1 = os.Create(logpath)
