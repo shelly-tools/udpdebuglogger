@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shelly-tools/udpdebugger/logger"
+	"github.com/shelly-tools/udpdebuglogger/logger"
 )
 
 func random(min, max int) int {
